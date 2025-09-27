@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="تواصل معي لبدء مشروعك أو للاستفسار عن الخدمات.">
+  <link rel="canonical" href="https://your-portfolio.com/contact.html">
+  <title>اتصل بي |  اياد شيخ خليل </title>
+  <link rel="icon" href="https://www.svgrepo.com/show/475654/github-color.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .contact-form {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem 1.5rem;
+      max-width: 500px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .contact-form label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--color-primary);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-family: var(--font-body);
+      resize: vertical;
+      transition: border-color .2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--color-accent);
+      outline: none;
+    }
+    .contact-form button {
+      align-self: flex-start;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">تخطي إلى المحتوى</a>
+  <input type="checkbox" id="dark-toggle" class="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-toggle-label" aria-label="تبديل الوضع الليلي">
+    <span class="moon">🌙</span>
+    <span class="sun">☀️</span>
+  </label>
+  <header class="header">
+    <nav class="nav container" aria-label="القائمة الرئيسية">
+      <a href="index.html" class="logo">اياد شيخ خليل </a>
+      <ul class="nav-list">
+        <li><a href="about.html">عنّي</a></li>
+        <li><a href="projects.html">المشاريع</a></li>
+        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="contact.html" aria-current="page" class="btn btn-primary">اتصل بي</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="container">
+    <h1 class="text-center">اتصل بي</h1>
+    <form class="contact-form" action="#" method="POST" aria-label="نموذج التواصل">
+      <div>
+       <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" required autocomplete="name" aria-required="true">
+         
+      </div>
+      <div>
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required autocomplete="email" aria-required="true">
+      </div>
+      <div>
+        <label for="message">رسالتك</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">إرسال</button>
+    </form>
+    <div class="text-center">
+      <p>أو تواصل مباشرة عبر:</p>
+      <ul class="social-list" style="justify-content:center;">
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475689/twitter-color.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475661/linkedin-color.svg" alt="LinkedIn"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475654/github-color.svg" alt="GitHub"></a></li>
+      </ul>
+    </div>
+    <a href="#top" class="back-to-top" aria-label="العودة للأعلى">↑</a>
+  </main>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025  اياد شيخ خليل . جميع الحقوق محفوظة.</p>
+      <ul class="social-list">
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475689/twitter-color.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475661/linkedin-color.svg" alt="LinkedIn"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475654/github-color.svg" alt="GitHub"></a></li>
+      </ul>
+    </div>
+  </footer>
+<script>
+  // عند تحميل الصفحة: تحقق من localStorage وفعّل الوضع المناسب
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('dark-toggle');
+    // إذا كان هناك تفضيل محفوظ
+    if(localStorage.getItem('theme') === 'dark') {
+      toggle.checked = true;
+      document.body.classList.add('dark');
+    } else {
+      toggle.checked = false;
+      document.body.classList.remove('dark');
+    }
+    // عند تغيير التبديل، احفظ التفضيل
+    toggle.addEventListener('change', function() {
+      if(toggle.checked) {
+        localStorage.setItem('theme', 'dark');
+        document.body.classList.add('dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+        document.body.classList.remove('dark');
+      }
+    });
+  });
+</script>
+</body>
+</html>

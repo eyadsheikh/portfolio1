@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="تعرف على خبرتي ومهاراتي في تطوير المواقع.">
+  <link rel="canonical" href="https://your-portfolio.com/about.html">
+  <title>عنّي |  اياد شيخ خليل</title>
+  <link rel="icon" href="https://www.svgrepo.com/show/475654/github-color.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">تخطي إلى المحتوى</a>
+  <input type="checkbox" id="dark-toggle" class="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-toggle-label" aria-label="تبديل الوضع الليلي">
+    <span class="moon">🌙</span>
+    <span class="sun">☀️</span>
+  </label>
+  <header class="header">
+    <nav class="nav container" aria-label="القائمة الرئيسية">
+      <a href="index.html" class="logo"> اياد شيخ خليل</a>
+      <ul class="nav-list">
+        <li><a href="about.html" aria-current="page">عنّي</a></li>
+        <li><a href="projects.html">المشاريع</a></li>
+        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="contact.html" class="btn btn-primary">اتصل بي</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="container">
+    <section class="about-section">
+      <h1 class="text-center">عنّي</h1>
+      <div class="about-content" style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:center;">
+        <img src="https://cdn.pixabay.com/photo/2023/12/01/22/27/spiderman-8424632_1280.jpg"
+             alt=" اياد شيخ خليل" class="about-img" width="180" height="180" loading="lazy" style="border-radius:50%;border:4px solid var(--color-primary);box-shadow:var(--shadow);">
+        <div>
+          <p>
+            أنا <strong> اياد شيخ خليل</strong>، مطور واجهات أمامية بخبرة تزيد عن 5 سنوات في بناء مواقع عصرية وسريعة. أركز على تقديم حلول رقمية تساعد الشركات والأفراد على النجاح في عالم الإنترنت.
+          </p>
+          <ul>
+            <li>تصميم واجهات متجاوبة (Mobile-First)</li>
+            <li>تحسين الأداء وتجربة المستخدم</li>
+            <li>كتابة كود نظيف وقابل للصيانة</li>
+            <li>تحسين SEO وظهور المواقع</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-2">تواصل معي</a>
+        </div>
+      </div>
+    </section>
+    <section class="skills-section">
+      <h2>المهارات والتقنيات</h2>
+      <ul class="tech-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Flexbox</li>
+        <li>CSS Grid</li>
+        <li>Responsive Design</li>
+        <li>SEO</li>
+        <li>Accessibility</li>
+      </ul>
+    </section>
+    <section class="testimonials container">
+      <h2>آراء العملاء</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <img src="https://cdn.pixabay.com/photo/2016/12/05/21/55/super-woman-1885016_1280.jpg" alt="سارة أحمد" class="testimonial-avatar" width="48" height="48">
+          <p>“موقع احترافي وسريع، تجربة رائعة في التعامل!”</p>
+          <footer>— سارة أحمد، شركة ناشئة</footer>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <img src="https://cdn.pixabay.com/photo/2023/07/06/09/07/ai-generated-8109979_1280.jpg" alt="خالد يوسف" class="testimonial-avatar" width="48" height="48">
+          <p>“رفع ظهورنا في محركات البحث وزاد العملاء.”</p>
+          <footer>— خالد يوسف، مؤسسة تقنية</footer>
+        </blockquote>
+      </div>
+    </section>
+    <a href="#top" class="back-to-top" aria-label="العودة للأعلى">↑</a>
+  </main>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025  اياد شيخ خليل . جميع الحقوق محفوظة.</p>
+      <ul class="social-list">
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475689/twitter-color.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475661/linkedin-color.svg" alt="LinkedIn"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475654/github-color.svg" alt="GitHub"></a></li>
+      </ul>
+    </div>
+  </footer>
+<script>
+  // عند تحميل الصفحة: تحقق من localStorage وفعّل الوضع المناسب
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('dark-toggle');
+    // إذا كان هناك تفضيل محفوظ
+    if(localStorage.getItem('theme') === 'dark') {
+      toggle.checked = true;
+      document.body.classList.add('dark');
+    } else {
+      toggle.checked = false;
+      document.body.classList.remove('dark');
+    }
+    // عند تغيير التبديل، احفظ التفضيل
+    toggle.addEventListener('change', function() {
+      if(toggle.checked) {
+        localStorage.setItem('theme', 'dark');
+        document.body.classList.add('dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+        document.body.classList.remove('dark');
+      }
+    });
+  });
+</script>
+</body>
+</html>

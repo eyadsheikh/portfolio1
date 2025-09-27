@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="الأسئلة الشائعة حول خدمات تصميم وتطوير المواقع.">
+  <link rel="canonical" href="https://your-portfolio.com/faq.html">
+  <title>الأسئلة الشائعة |  اياد شيخ خليل </title>
+  <link rel="icon" href="https://www.svgrepo.com/show/475654/github-color.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">تخطي إلى المحتوى</a>
+  <input type="checkbox" id="dark-toggle" class="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-toggle-label" aria-label="تبديل الوضع الليلي">
+    <span class="moon">🌙</span>
+    <span class="sun">☀️</span>
+  </label>
+  <header class="header">
+    <nav class="nav container" aria-label="القائمة الرئيسية">
+      <a href="index.html" class="logo"> اياد شيخ خليل</a>
+      <ul class="nav-list">
+        <li><a href="about.html">عنّي</a></li>
+        <li><a href="projects.html">المشاريع</a></li>
+        <li><a href="faq.html" aria-current="page">الأسئلة الشائعة</a></li>
+        <li><a href="contact.html" class="btn btn-primary">اتصل بي</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="container">
+    <h1 class="text-center">الأسئلة الشائعة</h1>
+    <section class="faq-section">
+      <div class="faq-list">
+        <div class="faq-item">
+          <input type="checkbox" id="faq1" class="faq-toggle" hidden>
+          <label for="faq1" class="faq-question">كم يستغرق تنفيذ الموقع؟</label>
+          <div class="faq-answer">
+            عادةً من 7 إلى 14 يوم عمل حسب حجم المشروع والمحتوى المطلوب.
+          </div>
+        </div>
+        <div class="faq-item">
+          <input type="checkbox" id="faq2" class="faq-toggle" hidden>
+          <label for="faq2" class="faq-question">هل الموقع متجاوب مع جميع الأجهزة؟</label>
+          <div class="faq-answer">
+            نعم، جميع المواقع مصممة mobile-first وتعمل بكفاءة على جميع الشاشات.
+          </div>
+        </div>
+        <div class="faq-item">
+          <input type="checkbox" id="faq3" class="faq-toggle" hidden>
+          <label for="faq3" class="faq-question">هل يمكنني تعديل الألوان أو الخطوط لاحقاً؟</label>
+          <div class="faq-answer">
+            بالتأكيد! يمكنك تعديل الألوان والخطوط بسهولة من ملف CSS.
+          </div>
+        </div>
+        <div class="faq-item">
+          <input type="checkbox" id="faq4" class="faq-toggle" hidden>
+          <label for="faq4" class="faq-question">هل الموقع محسن لمحركات البحث (SEO)؟</label>
+          <div class="faq-answer">
+            نعم، جميع الصفحات تحتوي على meta tags، بنية HTML دلالية، وتحسينات سرعة وأداء.
+          </div>
+        </div>
+      </div>
+    </section>
+    <a href="#top" class="back-to-top" aria-label="العودة للأعلى">↑</a>
+  </main>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025  اياد شيخ خليل . جميع الحقوق محفوظة.</p>
+      <ul class="social-list">
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475689/twitter-color.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475661/linkedin-color.svg" alt="LinkedIn"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475654/github-color.svg" alt="GitHub"></a></li>
+      </ul>
+    </div>
+  </footer>
+<script>
+  // عند تحميل الصفحة: تحقق من localStorage وفعّل الوضع المناسب
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('dark-toggle');
+    // إذا كان هناك تفضيل محفوظ
+    if(localStorage.getItem('theme') === 'dark') {
+      toggle.checked = true;
+      document.body.classList.add('dark');
+    } else {
+      toggle.checked = false;
+      document.body.classList.remove('dark');
+    }
+    // عند تغيير التبديل، احفظ التفضيل
+    toggle.addEventListener('change', function() {
+      if(toggle.checked) {
+        localStorage.setItem('theme', 'dark');
+        document.body.classList.add('dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+        document.body.classList.remove('dark');
+      }
+    });
+  });
+</script>
+</body>
+</html>

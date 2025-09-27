@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="مجموعة من المشاريع المنفذة باستخدام أحدث تقنيات الويب.">
+  <link rel="canonical" href="https://your-portfolio.com/projects.html">
+  <title>المشاريع |  اياد شيخ خليل</title>
+  <link rel="icon" href="https://www.svgrepo.com/show/475654/github-color.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .filter-group { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; }
+    .filter-group label { cursor: pointer; padding: 0.4rem 1rem; border-radius: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); transition: background .2s; }
+    .filter-group input[type="radio"]:checked + label { background: var(--color-primary); color: #fff; }
+    .project-card[data-cat] { display: none; }
+    #all:checked ~ .projects-list .project-card { display: flex; }
+    #html:checked ~ .projects-list .project-card[data-cat~="html"] { display: flex; }
+    #css:checked ~ .projects-list .project-card[data-cat~="css"] { display: flex; }
+    #seo:checked ~ .projects-list .project-card[data-cat~="seo"] { display: flex; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">تخطي إلى المحتوى</a>
+  <input type="checkbox" id="dark-toggle" class="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-toggle-label" aria-label="تبديل الوضع الليلي">
+    <span class="moon">🌙</span>
+    <span class="sun">☀️</span>
+  </label>
+  <header class="header">
+    <nav class="nav container" aria-label="القائمة الرئيسية">
+      <a href="index.html" class="logo"> اياد شيخ خليل</a>
+      <ul class="nav-list">
+        <li><a href="about.html">عنّي</a></li>
+        <li><a href="projects.html" aria-current="page">المشاريع</a></li>
+        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="contact.html" class="btn btn-primary">اتصل بي</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="container">
+    <h1 class="text-center">المشاريع</h1>
+    <div class="filter-group" role="tablist" aria-label="فلترة المشاريع">
+      <input type="radio" name="filter" id="all" checked hidden>
+      <label for="all">الكل</label>
+      <input type="radio" name="filter" id="html" hidden>
+      <label for="html">HTML</label>
+      <input type="radio" name="filter" id="css" hidden>
+      <label for="css">CSS</label>
+      <input type="radio" name="filter" id="seo" hidden>
+      <label for="seo">SEO</label>
+    </div>
+    <div class="projects-list projects-grid">
+      <article class="project-card" data-cat="html css">
+        <a href="#modal-project1" class="project-modal-link" aria-label="تفاصيل المشروع الأول">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=320&q=80"
+               alt="مشروع صفحة هبوط" width="320" height="180" loading="lazy">
+        </a>
+        <div class="project-info">
+          <h3>صفحة هبوط منتج تقني</h3>
+          <p>صفحة هبوط تسويقية بتصميم عصري وتحويل مرتفع.</p>
+          <ul class="tech-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Responsive</li>
+          </ul>
+          <div class="project-links">
+            <a href="#modal-project1" class="btn btn-secondary project-modal-link">تفاصيل</a>
+            <a href="#" class="btn btn-link">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card" data-cat="css seo">
+        <a href="#modal-project2" class="project-modal-link" aria-label="تفاصيل المشروع الثاني">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=320&q=80"
+               alt="مشروع مدونة تقنية" width="320" height="180" loading="lazy">
+        </a>
+        <div class="project-info">
+          <h3>مدونة تقنية</h3>
+          <p>مدونة سريعة مع تحسينات SEO وتجربة قراءة ممتازة.</p>
+          <ul class="tech-list">
+            <li>CSS Grid</li>
+            <li>SEO</li>
+          </ul>
+          <div class="project-links">
+            <a href="#modal-project2" class="btn btn-secondary project-modal-link">تفاصيل</a>
+            <a href="#" class="btn btn-link">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card" data-cat="html">
+        <a href="#modal-project3" class="project-modal-link" aria-label="تفاصيل المشروع الثالث">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=320&q=80"
+               alt="مشروع صفحة تعريفية" width="320" height="180" loading="lazy">
+        </a>
+        <div class="project-info">
+          <h3>موقع شركة ناشئة</h3>
+          <p>موقع تعريفي متجاوب بالكامل مع هوية بصرية مميزة.</p>
+          <ul class="tech-list">
+            <li>HTML</li>
+            <li>Accessibility</li>
+          </ul>
+          <div class="project-links">
+            <a href="#modal-project3" class="btn btn-secondary project-modal-link">تفاصيل</a>
+            <a href="#" class="btn btn-link">GitHub</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- Project Modal 1 -->
+    <div id="modal-project1" class="modal-overlay" tabindex="-1" aria-modal="true" role="dialog">
+      <div class="modal-content">
+        <a href="#" class="modal-close" aria-label="إغلاق">×</a>
+        <h2>صفحة هبوط منتج تقني</h2>
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="صورة كاملة لصفحة الهبوط" width="600" height="340" loading="lazy">
+        <p>صفحة هبوط مصممة لمنتج SaaS مع نموذج اشتراك وتحويل مرتفع، متوافقة مع جميع الأجهزة.</p>
+        <ul class="tech-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Responsive</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" class="btn btn-secondary">معاينة مباشرة</a>
+          <a href="#" class="btn btn-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 2 -->
+    <div id="modal-project2" class="modal-overlay" tabindex="-1" aria-modal="true" role="dialog">
+      <div class="modal-content">
+        <a href="#" class="modal-close" aria-label="إغلاق">×</a>
+        <h2>مدونة تقنية</h2>
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="صورة كاملة للمدونة" width="600" height="340" loading="lazy">
+        <p>مدونة تقنية متجاوبة مع تحسينات SEO وسرعة تحميل عالية وتجربة قراءة ممتازة.</p>
+        <ul class="tech-list">
+          <li>CSS Grid</li>
+          <li>SEO</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" class="btn btn-secondary">معاينة مباشرة</a>
+          <a href="#" class="btn btn-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 3 -->
+    <div id="modal-project3" class="modal-overlay" tabindex="-1" aria-modal="true" role="dialog">
+      <div class="modal-content">
+        <a href="#" class="modal-close" aria-label="إغلاق">×</a>
+        <h2>موقع شركة ناشئة</h2>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="صورة كاملة للموقع التعريفي" width="600" height="340" loading="lazy">
+        <p>موقع تعريفي متجاوب بالكامل مع هوية بصرية مميزة وتجربة مستخدم ممتازة.</p>
+        <ul class="tech-list">
+          <li>HTML</li>
+          <li>Accessibility</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" class="btn btn-secondary">معاينة مباشرة</a>
+          <a href="#" class="btn btn-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <a href="#top" class="back-to-top" aria-label="العودة للأعلى">↑</a>
+  </main>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025  اياد شيخ خليل. جميع الحقوق محفوظة.</p>
+      <ul class="social-list">
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475689/twitter-color.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475661/linkedin-color.svg" alt="LinkedIn"></a></li>
+        <li><a href="#"><img src="https://www.svgrepo.com/show/475654/github-color.svg" alt="GitHub"></a></li>
+      </ul>
+    </div>
+  </footer>
+<script>
+  // عند تحميل الصفحة: تحقق من localStorage وفعّل الوضع المناسب
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('dark-toggle');
+    // إذا كان هناك تفضيل محفوظ
+    if(localStorage.getItem('theme') === 'dark') {
+      toggle.checked = true;
+      document.body.classList.add('dark');
+    } else {
+      toggle.checked = false;
+      document.body.classList.remove('dark');
+    }
+    // عند تغيير التبديل، احفظ التفضيل
+    toggle.addEventListener('change', function() {
+      if(toggle.checked) {
+        localStorage.setItem('theme', 'dark');
+        document.body.classList.add('dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+        document.body.classList.remove('dark');
+      }
+    });
+  });
+</script>
+</body>
+</html>
